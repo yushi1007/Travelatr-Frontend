@@ -12,7 +12,7 @@ const Search = ({searchText, onSearch, checkBox, onCheckBox, sort, onSort}) => {
             <label>International</label>
             <input 
                     type="checkbox" 
-                    id="us-international"
+                    id="checkbox"
                     checked={checkBox ? "true" : ""}
                     onChange={onCheckBox}
                 />
