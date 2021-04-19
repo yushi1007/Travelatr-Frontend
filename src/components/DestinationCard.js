@@ -1,10 +1,12 @@
 import React from "react";
 
-const DestinationCard = () => {
-// Hello world
+const DestinationCard = ({destination}) => {
+    const { name, image , description } = destination
     return (
         <div className="destination-card">
-            <h1>list of the place card</h1>
+            <h3>{name}</h3>
+            <img src={image} alt={name} />
+            <p>{description}</p>
         </div>
     )
 }
