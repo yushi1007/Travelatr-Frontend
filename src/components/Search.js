@@ -2,11 +2,13 @@ import React from "react";
 
 const Search = ({searchText, onSearch, checkBox, onCheckBox, sort, onSort}) => {
     return(
-        <div className="filter-search">
-            <div className="ui icon input">
-                <input className="prompt" type="text" placeholder="Search by name" value={searchText} onChange={onSearch} />
-                <i className="search icon" />
-            </div>
+    <>
+        <div className="wrap-search">
+            <form className="search">
+                <input className="search-name" type="text" placeholder="Search place name..." value={searchText} onChange={onSearch} />
+                <button className="search-button" type="submit"><i className="fas fa-search-location"/></button>
+            </form>
+        </div>
             <label>Domestic</label>
             <input 
                     type="checkbox" 
@@ -15,11 +17,11 @@ const Search = ({searchText, onSearch, checkBox, onCheckBox, sort, onSort}) => {
                     onChange={onCheckBox}
                 />
             <label>Sort by</label>
-            <select class="ui fluid dropdown" id="sort" value={sort} onChange={onSort}>
+            <select className="ui fluid dropdown" id="sort" value={sort} onChange={onSort}>
                 <option value="popularity">Popularity</option>
                 <option value="name">Name</option>
             </select>
-        </div>
+    </>
     )
 }
 

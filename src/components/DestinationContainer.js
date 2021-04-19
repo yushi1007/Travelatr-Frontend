@@ -57,18 +57,22 @@ const DestinationContainer = () => {
         return <DestinationCard key={destination.id} destination={destination}/>
     })
     return (
+    <>
         <div className="destination-container">
             <h1>Top Place to Travel in 2021</h1>
             <Search 
-                searchText={searchText} 
-                onSearch={handleSearchText} 
-                checkBox={checkBox} 
-                onCheckBox={handleCheckBox}
-                sort={sort}
-                onSort={handleSort}
-                />
+            searchText={searchText} 
+            onSearch={handleSearchText} 
+            checkBox={checkBox} 
+            onCheckBox={handleCheckBox}
+            sort={sort}
+            onSort={handleSort}
+            />
+        </div>
+        <div className="destination">
             {destinationCards}
         </div>
+    </>
     )
 }
 

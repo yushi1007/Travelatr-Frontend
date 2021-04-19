@@ -3,21 +3,35 @@ import { Link } from "react-router-dom";
 // import logouticon from '../images/logout.png'
 // import loggedinicon from '../images/login.png'
 
-function NavBar() {
+function NavBar({ user, setUser }) {
+
+    const logout = () => {
+
+        localStorage.removeItem("token")
+    
+        setUser(null);
+      }
 
     return (
         <div>
           <div className="navbar">
             <div className="home">
-                <Link to="/" id="logo">TRAVELATR</Link>
+                <Link to="/" id="logo"><i class="fas fa-map-marked-alt"></i>TRAVELATR</Link>
                 <Link to="/" className="home-text">Home</Link>
             </div>
             <div>
+                {user ? (
+            <>
+                <Link to="/profile" className="profile"><i class="far fa-user-circle"></i></Link>
+                <Link to="/profile" className="favorite">My Favorite</Link>
+                <button onClick={logout} className="logout-btn">Logout</button>
+            </>
+                ) : (
+            <>
                 <Link to="/login" className="loginicon">Sign In</Link>
                 <Link to="/signup" className="loggedinicon">Sign Up</Link>
-                <Link to="/profile" className="profile">Profile</Link>
-                <Link to="/profile" className="favorite">My Favorite</Link>
-                <button className="logout-btn">Logout</button>
+            </>
+                )}
             </div>
           </div>
         </div>
