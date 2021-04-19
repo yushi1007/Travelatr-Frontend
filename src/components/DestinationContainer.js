@@ -38,7 +38,7 @@ const DestinationContainer = () => {
 /*        CHECK BOX TO SEE DOMESTIC DESTINATIONS        */
     .filter((destination) => {
         if (checkBox) {
-            return destination.us
+            return !destination.us
         } else {
             return destination
         }

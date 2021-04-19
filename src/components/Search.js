@@ -9,7 +9,7 @@ const Search = ({searchText, onSearch, checkBox, onCheckBox, sort, onSort}) => {
                 <button className="search-button" type="submit"><i className="fas fa-search-location"/></button>
             </form>
         {/* </div> */}
-            <label>Domestic</label>
+            <label>International</label>
             <input 
                     type="checkbox" 
                     id="us-international"
