@@ -22,8 +22,9 @@ function NavBar({ user, setUser }) {
             <div>
                 {user ? (
             <>
-                <Link to="/profile" className="profile"><i class="far fa-user-circle"></i></Link>
+                <Link to="/destination-list" className="destination-btn">Destinations</Link>
                 <Link to="/profile" className="favorite">My Favorite</Link>
+                <Link to="/profile" className="profile"><i class="far fa-user-circle"/></Link>
                 <button onClick={logout} className="logout-btn">Logout</button>
             </>
                 ) : (

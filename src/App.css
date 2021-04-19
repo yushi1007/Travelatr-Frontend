@@ -132,7 +132,7 @@
   color: black;
   width: 80px;
   height: 40px;
-  left: 87%;
+  left: 90%;
   top: 10px;
   border-radius: 24px;
   border: 1px solid #E5E5E5;
@@ -152,7 +152,7 @@
   color: white;
   width: 80px;
   height: 40px;
-  left: 93%;
+  left: 95%;
   top: 10px;
   cursor: pointer;
 }
@@ -165,9 +165,9 @@
   justify-content: center;
   font-weight: bolder;
   color: black;
-  width: 100px;
+  width: 120px;
   height: 40px;
-  left: 76%;
+  left: 80%;
   top: 10px;
   background: #E5E5E5;
   border-radius: 24px;
@@ -202,6 +202,23 @@
   align-items: center;
 }
 
+.destination-btn{
+  position: absolute;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+  color: black;
+  width: 120px;
+  height: 40px;
+  left: 70%;
+  top: 10px;
+  background: #E5E5E5;
+  border-radius: 24px;
+  cursor: pointer;
+}
+
 .destination-container{
   padding: 4rem;
 }
@@ -225,6 +242,7 @@
   display: grid;
   width: 100%;
   max-height: 500px;
+  max-width: 300px;
 }
 
 .destination-card{
@@ -286,6 +304,53 @@
   top: 22%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.view-more-btn {
+    border: none;
+    display: block;
+    position: relative;
+    padding: 0.5em 2em;
+    font-size: 25px;
+    background: transparent;
+    cursor: pointer;
+    user-select: none;
+    color: var(--main-color);
+    overflow: hidden;
+    font-weight: bold;
+}
+
+.view-more-btn span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: -1;
+  border: 5px solid black;
+}
+.view-more-btn span::before {
+  content: "";
+  position: absolute;
+  width: 5%;
+  height: 500%;
+  background: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-60deg);
+  transition: all 0.3s;
+}
+.view-more-btn:hover span::before,
+.view-more-btn:focus span::before {
+  transform: translate(-50%, -50%) rotate(-90deg);
+  width: 100%;
+  background:#2c3e50;
+  transition-delay: 0.1s;
+}
+.view-more-btn:hover,
+.view-more-btn:focus {
+  color: white;
 }
 
 @media only screen and (max-width: 780px){
