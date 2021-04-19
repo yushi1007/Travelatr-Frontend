@@ -8,7 +8,7 @@ const DestinationCard = ({ destination }) => {
             <h3>{name}</h3>
             <img src={image} alt={name} />
             <p>{description}</p>
-            <Link to={`/destination/${id}`} className="view-more-btn">View More<span></span></Link>
+            <Link to={`/destination/${id}`} className="view-more-btn view-more-btn-1">View More</Link>
         </div>
     )
 }

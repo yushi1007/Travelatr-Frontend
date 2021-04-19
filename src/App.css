@@ -48,6 +48,21 @@
   min-width: 1700px;
 }
 
+#landscape-img {
+  background-size: cover;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  position: fixed;
+  height: auto;
+  right: 0;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: -20;
+  min-width: 300px;
+  max-height: 400px;
+}
+
 .navbar {
   position: absolute;
   background-color: #24252A;
@@ -184,7 +199,7 @@
   color: black;
   width: 120px;
   height: 40px;
-  left: 68%;
+  left: 67%;
   top: 10px;
   background: #E5E5E5;
   border-radius: 24px;
@@ -241,6 +256,7 @@
 .destination-card{
   display: grid;
   width: 100%;
+  background-color: white;
   max-height: 500px;
   max-width: 300px;
 }
@@ -261,9 +277,6 @@
 
 .search {
   width: 25%;
-  position: relative;
-  align-items: center;
-  justify-content: center;
   display: flex;
 }
 
@@ -309,52 +322,17 @@
 .view-more-btn {
   text-decoration: none;
   border: none;
-  display: block;
-  position: relative;
-  padding: 0.5em 2em;
-  font-size: 25px;
-  background: transparent;
+  background-color: #343A40;
+  border-radius: 4px;  
+  color: #fff;
   cursor: pointer;
-  user-select: none;
-  color: var(--main-color);
-  overflow: hidden;
-  font-weight: bold;
+  padding: 8px 16px;
+  font-weight: bolder;
 }
 
-.view-more-btn span {
-position: absolute;
-left: 0;
-top: 0;
-width: 100%;
-height: 100%;
-background: transparent;
-z-index: -1;
-border: 5px solid black;
-}
-
-.view-more-btn span::before {
-content: "";
-position: absolute;
-width: 5%;
-height: 500%;
-background: white;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%) rotate(-60deg);
-transition: all 0.3s;
-}
-
-.view-more-btn:hover span::before,
-.view-more-btn:focus span::before {
-transform: translate(-50%, -50%) rotate(-90deg);
-width: 100%;
-background:#2c3e50;
-transition-delay: 0.1s;
-}
-
-.view-more-btn:hover,
-.view-more-btn:focus {
-color: white;
+.view-more-btn-1:hover {
+  background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+  animation:slidebg 5s linear infinite;
 }
 
 @media only screen and (max-width: 780px){
