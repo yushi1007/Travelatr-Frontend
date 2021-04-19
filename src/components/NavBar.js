@@ -16,7 +16,7 @@ function NavBar({ user, setUser }) {
         <div>
           <div className="navbar">
             <div className="home">
-                <Link to="/" id="logo"><i class="fas fa-map-marked-alt"></i>TRAVELATR</Link>
+                <Link to="/" id="logo"><i className="fas fa-map-marked-alt"></i>TRAVELATR</Link>
                 <Link to="/" className="home-text">Home</Link>
             </div>
             <div>
@@ -24,8 +24,8 @@ function NavBar({ user, setUser }) {
             <>
                 <Link to="/destination-list" className="destination-btn">Destinations</Link>
                 <Link to="/profile" className="favorite">My Favorite</Link>
-                <Link to="/profile" className="profile"><i class="far fa-user-circle"/></Link>
-                <button onClick={logout} className="logout-btn">Logout</button>
+                <Link to="/profile" className="profile"><i className="far fa-user-circle"/></Link>
+                <Link to="/"onClick={logout} className="logout-btn">Logout</Link>
             </>
                 ) : (
             <>

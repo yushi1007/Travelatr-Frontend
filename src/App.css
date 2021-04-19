@@ -260,7 +260,7 @@
 }
 
 .search {
-  width: 100%;
+  width: 25%;
   position: relative;
   align-items: center;
   justify-content: center;
@@ -295,7 +295,7 @@
 }
 
 /*Resize the wrap to see the search bar change!*/
-.wrap-search{
+/* .wrap-search{
   width: 20%;
   display: fixed;
   position: absolute;
@@ -304,9 +304,10 @@
   top: 22%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
+} */
 
 .view-more-btn {
+  text-decoration: none;
   border: none;
   display: block;
   position: relative;
