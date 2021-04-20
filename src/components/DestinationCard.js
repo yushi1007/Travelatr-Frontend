@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+
 const DestinationCard = ({ destination }) => {
-    const {id, name, image, description } = destination
+    const { id, name, image, description } = destination
     return (
         <div className="destination-card">
             <div className="image-container">
