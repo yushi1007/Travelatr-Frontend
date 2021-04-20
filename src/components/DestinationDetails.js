@@ -5,17 +5,23 @@ import ReviewList from "./ReviewList";
 import PhotosContainer from "./PhotosContainer";
 
 const DestinationDetails = () => {
-    const [destination, setDestination] = useState([])
+    const [destination, setDestination] = useState(null)
+    const [isLoaded, setIsLoaded] = useState(false);
     const {id} = useParams()
 
     useEffect(() => {
         fetch(`http://localhost:3000/destinations/${id}`)
         .then(r => r.json())
-        .then((destination) => setDestination(destination))
+        .then((destination) => {
+            setDestination(destination)
+            setIsLoaded(true)
+        })
     }, [id])
-    
+
+    if (!isLoaded) return <h2>Loading...</h2>;
+
     const { name, image, description, us, airport_code, photos, rating, reviews, user_ratings_total } = destination
-    console.log(photos)
+    
     return(
         <div className="destination-details">
             <h3>{name}</h3>
