@@ -11,11 +11,12 @@ import DestinationContainer from "./DestinationContainer";
 
 function App() {
   const [user, setUser] = useState(null)
-
+  const [destinations, setDestinations] = useState([])
+  const [likesClick, setLikesClick] = useState(0)
   useEffect(() => {
     // GET /me
     const token = localStorage.getItem("token");
-    fetch("http://localhost:3000/me", {
+    fetch("http://localhost:7000/me", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -53,10 +54,10 @@ function App() {
             <Profile user={user} setUser={setUser} />
           </Route>
           <Route exact path="/destination-list">
-            <DestinationContainer />
+            <DestinationContainer destinations={destinations} setDestinations={setDestinations} likesClick={likesClick} setLikesClick={setLikesClick} />
           </Route>
-          <Route exact path="/destinations/:id">
-            <DestinationDetails/>
+          <Route exact path="/destination/:id">
+            <DestinationDetails user={user} />
           </Route>
         </Switch>
       </main>

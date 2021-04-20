@@ -3,20 +3,19 @@ import DestinationCard from "./DestinationCard";
 import Search from "./Search";
 import aerial from "../images/aerial.jpeg"
 
-
-const DestinationContainer = () => {
+const DestinationContainer = ({ destinations, setDestinations, likes, setLikes}) => {
 /*        USE STATE        */
-    const [destinations, setDestinations] = useState([])
+    
     const [searchText, setSearchText] = useState("")
     const [checkBox, setCheckBox] = useState(false)
     const [sort, setSort] = useState("popularity")
 
 /*        FETCH DESTINATIONS INFO        */
     useEffect(() => {
-        fetch("http://localhost:3000/destinations")
+        fetch("http://localhost:7000/destinations")
         .then(r => r.json())
-        .then(setDestinations)
-    }, [])
+        .then(destinations => setDestinations(destinations))
+    }, [likes])
 
 /*       HANDLE SEARCH DESTINATIONS BY NAME       */
     const handleSearchText = (event) => {
@@ -56,7 +55,12 @@ const DestinationContainer = () => {
 
 /*        LIST OF THE DESTINATIONS        */
     const destinationCards = destinationsToDisplay.map((destination) => {
-        return <DestinationCard key={destination.id} destination={destination} />
+        return <DestinationCard 
+                    key={destination.id}    
+                    destination={destination}
+                    likes={likes}
+                    setLikes={setLikes}
+               />
     })
     return (
     <>

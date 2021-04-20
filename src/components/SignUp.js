@@ -23,7 +23,7 @@ function SignUp({ setUser }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch("http://localhost:3000/signup", {
+    fetch("http://localhost:7000/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

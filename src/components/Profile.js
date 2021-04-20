@@ -23,7 +23,7 @@ const Profile = ({user, setUser}) => {
         e.preventDefault();
         // TODO: update the user's profile
             const token = localStorage.getItem("token");
-            fetch("http://localhost:3000/me", {
+            fetch("http://localhost:7000/me", {
               method: "PATCH",
               headers: {
                   "Content-Type": "application/json",
