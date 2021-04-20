@@ -60,7 +60,7 @@ const DestinationContainer = () => {
     return (
     <>
         <div className="destination-container">
-            <h1>Top Place to Travel in 2021</h1>
+            <h1>PLAN YOUR ESCAPE</h1>
             <Search 
             searchText={searchText} 
             onSearch={handleSearchText} 
