@@ -28,12 +28,9 @@ const DestinationDetails = () => {
                 <p>{reviews ? <ReviewList reviews={reviews} /> : null }</p>
                 <p>{user_ratings_total} reviews </p>
             </span>
-<<<<<<< HEAD
             <PhotosContainer photos={photos} />
-=======
             {/* <PhotosContainer photos={photos} /> */}
 
->>>>>>> main
             <FlightSearch />
         </div>
     )

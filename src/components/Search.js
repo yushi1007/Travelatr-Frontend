@@ -9,14 +9,14 @@ const Search = ({searchText, onSearch, checkBox, onCheckBox, sort, onSort}) => {
                 <button className="search-button" type="submit"><i className="fas fa-search-location"/></button>
             </form>
         {/* </div> */}
-            <label>International</label>
+            <label id="checkbox-label">International</label>
             <input 
                     type="checkbox" 
                     id="checkbox"
                     checked={checkBox ? "true" : ""}
                     onChange={onCheckBox}
                 />
-            <label>Sort by</label>
+            <label id="sort-text">Sort by</label>
             <select className="ui fluid dropdown" id="sort" value={sort} onChange={onSort}>
                 <option value="popularity">Popularity</option>
                 <option value="name">Name</option>
