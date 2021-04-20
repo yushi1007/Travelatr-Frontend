@@ -102,6 +102,11 @@
   height: 40px;
   left: 3%;
   top: 10px;
+  transition: 0.1s;
+}
+
+#logo:hover{
+color: black;
 }
 
 .home-text {
