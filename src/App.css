@@ -102,6 +102,11 @@
   height: 40px;
   left: 3%;
   top: 10px;
+  transition: 0.1s;
+}
+
+#logo:hover{
+color: black;
 }
 
 .home-text {
@@ -365,6 +370,7 @@
 
 .view-more-btn-1:hover {
   background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+    animation:slidebg 5s linear infinite;
   animation:slidebg 5s linear infinite;
 } */
 

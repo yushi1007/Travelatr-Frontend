@@ -29,7 +29,6 @@ const DestinationDetails = () => {
                 <p>{user_ratings_total} reviews </p>
             </span>
             {/* <PhotosContainer photos={photos} /> */}
-
             <FlightSearch />
         </div>
     )
