@@ -14,7 +14,7 @@ const DestinationDetails = () => {
         .then((destination) => setDestination(destination))
     }, [id])
     
-    const { name, image, description, us, airport_code, photos, rating, reviews, user_ratings_total } = destination
+    const { name, image, description, us, airport_code, rating, photos, reviews, user_ratings_total } = destination
     console.log(photos)
     return(
         <div className="destination-details">
@@ -28,7 +28,7 @@ const DestinationDetails = () => {
                 <p>{reviews ? <ReviewList reviews={reviews} /> : null }</p>
                 <p>{user_ratings_total} reviews </p>
             </span>
-            {/* <PhotosContainer photos={photos} /> */}
+            <PhotosContainer photos={photos} /> 
             <FlightSearch />
         </div>
     )

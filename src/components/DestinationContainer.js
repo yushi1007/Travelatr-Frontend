@@ -3,6 +3,7 @@ import DestinationCard from "./DestinationCard";
 import Search from "./Search";
 import aerial from "../images/aerial.jpeg"
 
+
 const DestinationContainer = () => {
 /*        USE STATE        */
     const [destinations, setDestinations] = useState([])
@@ -55,7 +56,7 @@ const DestinationContainer = () => {
 
 /*        LIST OF THE DESTINATIONS        */
     const destinationCards = destinationsToDisplay.map((destination) => {
-        return <DestinationCard key={destination.id} destination={destination}/>
+        return <DestinationCard key={destination.id} destination={destination} />
     })
     return (
     <>

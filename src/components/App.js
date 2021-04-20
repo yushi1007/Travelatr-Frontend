@@ -55,7 +55,7 @@ function App() {
           <Route exact path="/destination-list">
             <DestinationContainer />
           </Route>
-          <Route exact path="/destination/:id">
+          <Route exact path="/destinations/:id">
             <DestinationDetails/>
           </Route>
         </Switch>

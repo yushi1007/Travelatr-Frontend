@@ -10,7 +10,7 @@ const DestinationCard = ({ destination }) => {
             </div>
             <h3>{name}</h3>
             <p>{description}</p>
-            <Link to={`/destination/${id}`} className="view-more-btn">View More</Link>
+            <Link to={`/destinations/${id}`} className="view-more-btn">View More</Link>
         </div>
     )
 }
