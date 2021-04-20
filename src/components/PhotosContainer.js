@@ -3,9 +3,9 @@ import { useState } from "react";
 
 export default function PhotosContainer ({photos}) {
     const [photoIndex, setPhotoIndex] = useState(0)
-    
+
     const photoItems = photos.slice(photoIndex, photoIndex + 2).map((photo) =>
-        <Photo photo={photo}/>
+        <Photo key={photo} photo={photo}/>
     )
 
     function handleClickMore () {
@@ -14,7 +14,7 @@ export default function PhotosContainer ({photos}) {
     return (
         <div>
             {photoItems}
-            <button onClick={handleClickMore}/>
+            <button onClick={handleClickMore}>Show more photo</button>
         </div>
     )
 }
