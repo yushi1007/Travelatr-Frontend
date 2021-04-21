@@ -42,16 +42,31 @@ function App() {
           }
         });
       })
-      .then((user) => {
+      .then((signedInUser) => {
         // response => set user in state
-        setUser(user);
+        setUser(signedInUser);
+        console.log(signedInUser.favorites, "user's favs")
+        setFavoriteList(signedInUser.favorites)
+        setIsLoaded(true)
       });
   }, []);
-//  console.log(user.id)
+   
+  console.log(favoriteList, "fav list app")
+  function handleFetchFav() {
+    fetch(`http://localhost:7000/users/${user.id}`)
+    .then(r => r.json())
+    .then((user) => {
+      console.log(user, "user")
+      console.log(user.favorites)
+            setFavoriteList(user.favorites)
+        })
+  }
+  
   function handleAddFavorite(favoriteToAdd) {
     setFavoriteList([...favoriteList, favoriteToAdd])
     console.log(favoriteToAdd, "new favorite")
   }
+
   console.log(favoriteList)
   return (
     <div className="App">
@@ -68,7 +83,7 @@ function App() {
             <Login setUser={setUser} />
           </Route> */}
           <Route exact path="/profile">
-            <Profile user={user} setUser={setUser} handleAddFavorite={handleAddFavorite} favoriteList={favoriteList} setFavoriteList={setFavoriteList}/>
+            <Profile user={user} setUser={setUser} handleAddFavorite={handleAddFavorite} favoriteList={favoriteList} isLoaded={isLoaded} handleFetchFav={handleFetchFav}/>
           </Route>
           <Route exact path="/destination-list">
             <DestinationContainer destinations={destinations} isLoaded={isLoaded}  />

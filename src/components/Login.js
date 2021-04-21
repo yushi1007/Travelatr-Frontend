@@ -39,7 +39,10 @@ const Login = ({ setUser, isShowLogin }) => {
         history.push("/destination-list");
       })
       .catch((error) => {
+        console.log(error, "login error")
+        if (error) {
         setErrors(error.errors);
+        }
       });
   }
 
