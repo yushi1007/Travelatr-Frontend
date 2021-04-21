@@ -54,53 +54,56 @@ const Profile = ({user, setUser, handleAddFavorite, favoriteList, setFavoriteLis
 
 const { first_name, last_name, location, username, password } = formData;
     return(
+    <>
     <div className="profile-form" onSubmit={handleSubmit} >
         <form>
             <h1>{user.username}'s Profile</h1>
-
-            <label>First Name</label>
+            <label>First Name</label><br></br>
                 <input
                     type="text"
                     name="first_name"
                     value={first_name}
                     onChange={handleChange}
-                />
+                /><br></br>
 
-                <label>Last Name</label>
+                <label>Last Name</label><br></br>
                 <input
                     type="text"
                     name="last_name"
                     value={last_name}
                     onChange={handleChange}
-                />
+                /><br></br>
 
-                <label>Location</label>
+                <label>Location</label><br></br>
                 <input
                     type="text"
                     name="location"
                     value={location}
                     onChange={handleChange}
-                />
+                /><br></br>
 
-                <label>Username</label>
+                <label>Username</label><br></br>
                 <input
                     type="text"
                     name="username"
                     value={username}
                     onChange={handleChange}
-                />
+                /><br></br>
 
-                <label>Password</label>
+                <label>Password</label><br></br>
                 <input
                     type="password"
                     name="password"
                     value={password}
                     onChange={handleChange}
-                />
+                /><br></br>
             <input type="submit" value="Update" />
         </form>
-        <FavoriteList handleAddFavorite={handleAddFavorite} favoriteList={favoriteList} isLoaded={isLoaded} />
-    </div>
+        </div>
+        <div className="favorite-list">
+            <FavoriteList handleAddFavorite={handleAddFavorite} favoriteList={favoriteList} isLoaded={isLoaded} />
+        </div>
+    </>
     )
 }
 

@@ -17,7 +17,7 @@ const DestinationCard = ({ destination }) => {
             <h3>{name}</h3>
             <p>{description}</p>
             {/* <span className="like">♥{likes.length}</span> */}
-            <button onClick={changeLocation}>View More</button>
+            <button className="view-more-btn" onClick={changeLocation}>View More</button>
             {/* <Link to={`/destination/${id}`} className="view-more-btn">View More</Link> */}
         </div>
     )
