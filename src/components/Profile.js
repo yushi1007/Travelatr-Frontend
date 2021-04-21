@@ -14,7 +14,6 @@ const Profile = ({user, setUser, handleAddFavorite, favoriteList, setFavoriteLis
             setFavoriteList(user.favorites)
             setIsLoaded(true)
         })
-
     }, [])
 
     

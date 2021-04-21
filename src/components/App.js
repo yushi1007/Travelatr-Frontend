@@ -47,7 +47,7 @@ function App() {
         setUser(user);
       });
   }, []);
-
+//  console.log(user.id)
   function handleAddFavorite(favoriteToAdd) {
     setFavoriteList([...favoriteList, favoriteToAdd])
     console.log(favoriteToAdd, "new favorite")
