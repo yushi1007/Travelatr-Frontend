@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 
-const Login = ({ setUser }) => {
+const Login = ({ setUser, isShowLogin }) => {
   const [formData, setFormData] = useState({
     username: "",
     password: "",
@@ -44,32 +44,36 @@ const Login = ({ setUser }) => {
   }
 
   return (
-<div className="login-container">
-    <div>
+<div className={`${isShowLogin ? "active" : ""} show`}>
+<div className="login-form">
+    <div className="form-box">
       <form onSubmit={handleSubmit}>
-        <h1>Login</h1>
-        <label>Username</label>
+        <h1 className="login-text">Login</h1>
+        <label>Username</label><br></br>
         <input
           type="text"
           name="username"
+          className="login-box"
           value={formData.username}
           onChange={handleChange}
-        />
-        <label>Password</label>
+        /><br></br>
+        <label>Password</label><br></br>
         <input
           type="password"
           name="password"
+          className="login-box"
           value={formData.password}
           onChange={handleChange}
-        />
+        /><br></br>
         {errors.map(error => 
         <p style={{ color: "red"}} key={error}>
           {error}
         </p>
         )}
-        <input type="submit" value="Login" />
+        <input type="submit" value="LOGIN" className="login-btn" />
       </form>
     </div>
+</div>
 </div>
   );
 }

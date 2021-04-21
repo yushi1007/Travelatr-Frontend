@@ -3,7 +3,7 @@ import '../App.css';
 import NavBar from "./NavBar";
 import { Switch, Route } from "react-router-dom";
 import SignUp from "./SignUp";
-import Login from "./Login";
+// import Login from "./Login";
 import Profile from "./Profile"
 import Home from "./Home";
 import DestinationDetails from "./DestinationDetails";
@@ -42,14 +42,14 @@ function App() {
       <main>
         <Switch>
           <Route exact path="/">
-            <Home />
+            <Home setUser={setUser} />
           </Route>
           <Route exact path="/signup">
             <SignUp setUser={setUser} />
           </Route>
-          <Route exact path="/login">
+          {/* <Route exact path="/login">
             <Login setUser={setUser} />
-          </Route>
+          </Route> */}
           <Route exact path="/profile">
             <Profile user={user} setUser={setUser} />
           </Route>

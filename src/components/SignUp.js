@@ -54,49 +54,54 @@ function SignUp({ setUser }) {
 
   return (
     <div className="signup-form">
-        <div>
+        <div className="form-box">
             <form onSubmit={handleSubmit}>
-                <h1>Signup</h1>
+                <h1 id="signup-text">Sign Up</h1><br></br>
 
-                <label>First Name</label>
+                <label>First Name</label><br></br>
                 <input
                     type="text"
                     name="first_name"
+                    className="signup-box"
                     value={first_name}
                     onChange={handleChange}
-                />
+                /><br></br>
 
-                <label>Last Name</label>
+                <label>Last Name</label><br></br>
                 <input
                     type="text"
                     name="last_name"
+                    className="signup-box"
                     value={last_name}
                     onChange={handleChange}
-                />
+                /><br></br>
 
-                <label>Location</label>
+                <label>Location</label><br></br>
                 <input
                     type="text"
                     name="location"
+                    className="signup-box"
                     value={location}
                     onChange={handleChange}
-                />
+                /><br></br>
 
-                <label>Username</label>
+                <label>Username</label><br></br>
                 <input
                     type="text"
                     name="username"
+                    className="signup-box"
                     value={username}
                     onChange={handleChange}
-                />
+                /><br></br>
 
-                <label>Password</label>
+                <label>Password</label><br></br>
                 <input
                     type="password"
                     name="password"
+                    className="signup-box"
                     value={password}
                     onChange={handleChange}
-                />
+                /><br></br>
 
                     {errors.map(error => 
                     <p style={{ color: "red"}} key={error}>
@@ -104,7 +109,7 @@ function SignUp({ setUser }) {
                     </p>
                     )}
 
-                <input type="submit" value="Signup" />
+                <input type="submit" value="SIGN UP" className="signup-btn" />
             </form>
         </div>
     </div>
