@@ -9,7 +9,6 @@ const DestinationDetails = ({user}) => {
     const [isLoaded, setIsLoaded] = useState(false);
     const {id} = useParams()
     
-    
     useEffect(() => {
         fetch(`http://localhost:7000/destinations/${id}`)
         .then(r => r.json())
@@ -18,7 +17,6 @@ const DestinationDetails = ({user}) => {
             setIsLoaded(true)
         })
     }, [id])
-    
     
     if (!isLoaded) return <h2>Loading...</h2>;
     
@@ -38,8 +36,6 @@ const DestinationDetails = ({user}) => {
             console.log(destination)
         })
     }
-
-
 
     return(
         <div className="destination-details">
