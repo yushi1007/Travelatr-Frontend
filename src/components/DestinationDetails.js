@@ -38,6 +38,7 @@ const DestinationDetails = ({user}) => {
     }
 
     return(
+    <>
         <div className="destination-details">
             <h3>{name}</h3>
             <img src={image} alt={name}/>
@@ -45,15 +46,18 @@ const DestinationDetails = ({user}) => {
             <p>{description}</p>
             <p>{us ? "Domestic" : "International"}</p>
             <p>Airport code: {airport_code}</p>
+        </div>
+        <div className="review-details">
             <span style={{display: rating ? "block" : "none" }}>
                 <p>{rating}</p>
                 <p>{reviews ? <ReviewList reviews={reviews} /> : null }</p>
                 <p>{user_ratings_total} reviews </p>
             </span>
+        </div>
             <PhotosContainer photos={photos} />
             <FlightSearch />
-        </div>
+    </>
     )
 }
-
+// wip
 export default DestinationDetails;

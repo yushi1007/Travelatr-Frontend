@@ -12,7 +12,7 @@ const DestinationCard = ({ destination, likesClick, setLikesClick }) => {
             </div>
             <h3>{name}</h3>
             <p>{description}</p>
-            <p>{likes.length} Likes 💙</p>
+            <span className="like">♥{likes.length}</span>
             <Link to={`/destination/${id}`} className="view-more-btn">View More</Link>
         </div>
     )

@@ -62,6 +62,8 @@ const DestinationContainer = ({ destinations, setDestinations, likes, setLikes})
                     setLikes={setLikes}
                />
     })
+
+    
     return (
     <>
         <div className="destination-container">
