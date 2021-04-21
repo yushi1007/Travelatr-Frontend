@@ -63,5 +63,5 @@ const DestinationDetails = ({user}) => {
     </>
     )
 }
-
+// wip
 export default DestinationDetails;
