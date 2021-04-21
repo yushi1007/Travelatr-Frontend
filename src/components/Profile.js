@@ -1,21 +1,21 @@
 import React, {useState, useEffect} from "react";
 import FavoriteList from "./FavoriteList";
 
-const Profile = ({user, setUser, handleAddFavorite, favoriteList, setFavoriteList}) => {
+const Profile = ({user, setUser, handleAddFavorite, favoriteList, isLoaded}) => {
     console.log(user)
     
-    const [isLoaded, setIsLoaded] = useState(false)
+   console.log(favoriteList, "fav list profile")
 
-    useEffect(() => {
-        fetch(`http://localhost:7000/users/${user.id}`)
-        .then(r => r.json())
-        .then((user) => {
-            console.log(user.favorites)
-            setFavoriteList(user.favorites)
-            setIsLoaded(true)
-        })
+    // const handleFetchFav = () => {
+    //     fetch(`http://localhost:7000/users/${user.id}`)
+    //     .then(r => r.json())
+    //     .then((user) => {
+    //         console.log(user.favorites)
+    //         setFavoriteList(user.favorites)
+    //         setIsLoaded(true)
+    //     })
 
-    }, [])
+    // }
 
     
     const [formData, setFormData] = useState({
