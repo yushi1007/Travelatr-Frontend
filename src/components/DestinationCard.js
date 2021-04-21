@@ -1,10 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 
-const DestinationCard = ({ destination, likesClick, setLikesClick }) => {
+const DestinationCard = ({ destination }) => {
     const { id, name, image, description, likes } = destination
-
+    const history = useHistory()
+    const changeLocation = () => {
+        history.push(`/destination/${id}`)
+    }
     return (
         <div className="destination-card">
             <div className="image-container">
@@ -12,8 +16,9 @@ const DestinationCard = ({ destination, likesClick, setLikesClick }) => {
             </div>
             <h3>{name}</h3>
             <p>{description}</p>
-            <span className="like">♥{likes.length}</span>
-            <Link to={`/destination/${id}`} className="view-more-btn">View More</Link>
+            {/* <span className="like">♥{likes.length}</span> */}
+            <button onClick={changeLocation}>View More</button>
+            {/* <Link to={`/destination/${id}`} className="view-more-btn">View More</Link> */}
         </div>
     )
 }

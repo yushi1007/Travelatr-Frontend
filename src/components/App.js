@@ -11,8 +11,20 @@ import DestinationContainer from "./DestinationContainer";
 
 function App() {
   const [user, setUser] = useState(null)
-  const [destinations, setDestinations] = useState([])
-  const [likesClick, setLikesClick] = useState(0)
+  const [destinations, setDestinations] = useState(null)
+  const [isLoaded, setIsLoaded] = useState(false)
+  const [favoriteList, setFavoriteList] = useState(null)
+
+  /*        FETCH DESTINATIONS INFO        */
+  useEffect(() => {
+    fetch("http://localhost:7000/destinations")
+    .then(r => r.json())
+    .then(destinations => {
+      setDestinations(destinations)
+      setIsLoaded(true)
+    })
+}, [])
+
   useEffect(() => {
     // GET /me
     const token = localStorage.getItem("token");
@@ -36,6 +48,11 @@ function App() {
       });
   }, []);
 
+  function handleAddFavorite(favoriteToAdd) {
+    setFavoriteList([...favoriteList, favoriteToAdd])
+    console.log(favoriteToAdd, "new favorite")
+  }
+  console.log(favoriteList)
   return (
     <div className="App">
       <NavBar user={user} setUser={setUser} />
@@ -51,13 +68,13 @@ function App() {
             <Login setUser={setUser} />
           </Route>
           <Route exact path="/profile">
-            <Profile user={user} setUser={setUser} />
+            <Profile user={user} setUser={setUser} handleAddFavorite={handleAddFavorite} favoriteList={favoriteList} setFavoriteList={setFavoriteList}/>
           </Route>
           <Route exact path="/destination-list">
-            <DestinationContainer destinations={destinations} setDestinations={setDestinations} likesClick={likesClick} setLikesClick={setLikesClick} />
+            <DestinationContainer destinations={destinations} isLoaded={isLoaded}  />
           </Route>
           <Route exact path="/destination/:id">
-            <DestinationDetails user={user} />
+            <DestinationDetails user={user} handleAddFavorite={handleAddFavorite} favoriteList={favoriteList}/>
           </Route>
         </Switch>
       </main>

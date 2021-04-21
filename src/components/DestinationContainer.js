@@ -1,21 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import DestinationCard from "./DestinationCard";
 import Search from "./Search";
 import aerial from "../images/aerial.jpeg"
 
-const DestinationContainer = ({ destinations, setDestinations, likes, setLikes}) => {
+const DestinationContainer = ({ destinations, isLoaded }) => {
 /*        USE STATE        */
-    
     const [searchText, setSearchText] = useState("")
     const [checkBox, setCheckBox] = useState(false)
     const [sort, setSort] = useState("popularity")
-
-/*        FETCH DESTINATIONS INFO        */
-    useEffect(() => {
-        fetch("http://localhost:7000/destinations")
-        .then(r => r.json())
-        .then(destinations => setDestinations(destinations))
-    }, [likes])
 
 /*       HANDLE SEARCH DESTINATIONS BY NAME       */
     const handleSearchText = (event) => {
@@ -58,12 +50,11 @@ const DestinationContainer = ({ destinations, setDestinations, likes, setLikes})
         return <DestinationCard 
                     key={destination.id}    
                     destination={destination}
-                    likes={likes}
-                    setLikes={setLikes}
                />
     })
-
     
+    if (!isLoaded) return <h2>Loading...</h2>;
+
     return (
     <>
         <div className="destination-container">
