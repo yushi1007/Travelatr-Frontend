@@ -132,6 +132,6 @@ const FlightSearch = ({ name }) => {
     </div>
     )
 }
-
+// Update
 export default FlightSearch;
 
