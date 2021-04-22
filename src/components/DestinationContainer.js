@@ -3,7 +3,7 @@ import DestinationCard from "./DestinationCard";
 import Search from "./Search";
 import aerial from "../images/aerial.jpeg"
 
-const DestinationContainer = ({ destinations, isLoaded, handleAddFavorite }) => {
+const DestinationContainer = ({ destinations, isLoaded, handleAddFavorite, likesCount, setLikesCount }) => {
 /*        USE STATE        */
     const [searchText, setSearchText] = useState("")
     const [checkBox, setCheckBox] = useState(false)
@@ -51,6 +51,8 @@ const DestinationContainer = ({ destinations, isLoaded, handleAddFavorite }) => 
                     key={destination.id}    
                     destination={destination}
                     handleAddFavorite={handleAddFavorite}
+                    likesCount={likesCount}
+                    setLikesCount={setLikesCount}
                />
     })
     

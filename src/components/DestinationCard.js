@@ -3,12 +3,14 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 
 
-const DestinationCard = ({ destination, handleAddFavorite }) => {
+const DestinationCard = ({ destination }) => {
     const { id, name, image, description, likes } = destination
+ 
     const history = useHistory()
     const changeLocation = () => {
         history.push(`/destination/${id}`)
     }
+  
     return (
         <div className="destination-card">
             <div className="image-container">
@@ -16,7 +18,7 @@ const DestinationCard = ({ destination, handleAddFavorite }) => {
             </div>
             <h3>{name}</h3>
             <p>{description}</p>
-            {/* <span className="like">♥{likes.length}</span> */}
+            <label className="like">♥{likes.length}</label>
             <button className="view-more-btn" onClick={changeLocation}>View More</button>
             {/* <Link to={`/destination/${id}`} className="view-more-btn">View More</Link> */}
         </div>

@@ -7,11 +7,6 @@ import PhotosContainer from "./PhotosContainer";
 const DestinationDetails = ({user, handleAddFavorite, favoriteList}) => {
     const {id} = useParams()
     
-    // console.log(initialFav, "initialFav")
-    // console.log(initialState, "initial state")
-    // console.log(user.favorites, "user's favorite")
-    // console.log(id, "destination id")
-    
     const [destination, setDestination] = useState(null)
     const [isLoaded, setIsLoaded] = useState(false)
     const [favorite, setFavorite] = useState(false)

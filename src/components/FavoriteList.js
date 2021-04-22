@@ -1,7 +1,9 @@
 import React from "react";
 import DestinationCard from "./DestinationCard";
 
-const FavoriteList = ({favoriteList, isLoaded, handleAddFavorite, handleDeleteFavorite }) => {
+const FavoriteList = ({favoriteList, isLoaded, handleAddFavorite, handleDeleteFavorite, likesCount, destinations}) => {
+    console.log(destinations)
+   
     if (!isLoaded) return <h2>Loading...</h2>;
     const handleDeleteClick = (event) => {
         const id = event.target.id
@@ -13,7 +15,7 @@ const FavoriteList = ({favoriteList, isLoaded, handleAddFavorite, handleDeleteFa
     }
     const favoriteItems = favoriteList.map((fav) => 
       <span style={{width:"300px"}} key={fav.id}>
-        <DestinationCard  key={fav.id} destination={fav.destination} handleAddFavorite={handleAddFavorite}/>
+        <DestinationCard  key={fav.id} destination={fav.destination} handleAddFavorite={handleAddFavorite} likesCount={likesCount}/>
         <button id={fav.id} className="delete-btn" onClick={handleDeleteClick}><i className="fas fa-trash-alt"></i>REMOVE</button>
       </span>
     )

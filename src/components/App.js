@@ -14,6 +14,7 @@ function App() {
   const [destinations, setDestinations] = useState(null)
   const [isLoaded, setIsLoaded] = useState(false)
   const [favoriteList, setFavoriteList] = useState(null)
+  
 
   /*        FETCH DESTINATIONS INFO        */
   useEffect(() => {
@@ -50,17 +51,7 @@ function App() {
       });
   }, []);
    
-  // console.log(favoriteList, "fav list app")
-  // function handleFetchFav() {
-  //   fetch(`http://localhost:7000/users/${user.id}`)
-  //   .then(r => r.json())
-  //   .then((user) => {
-  //     console.log(user, "user")
-  //     console.log(user.favorites)
-  //           setFavoriteList(user.favorites)
-  //       })
-  // }
-  
+
   function handleAddFavorite(favoriteToAdd) {
     setFavoriteList([...favoriteList, favoriteToAdd])
     console.log(favoriteToAdd, "new favorite")
@@ -72,6 +63,7 @@ function App() {
   }
 
   console.log(favoriteList, "fav list")
+  
   return (
     <div className="App">
       <NavBar user={user} setUser={setUser} />
@@ -86,10 +78,10 @@ function App() {
           <Route exact path="/profile">
             <Profile user={user} setUser={setUser} handleAddFavorite={handleAddFavorite} 
             handleDeleteFavorite={handleDeleteFavorite}
-            favoriteList={favoriteList} isLoaded={isLoaded}/>
+            favoriteList={favoriteList} isLoaded={isLoaded} />
           </Route>
           <Route exact path="/destination-list">
-            <DestinationContainer destinations={destinations} isLoaded={isLoaded} handleAddFavorite={handleAddFavorite}  />
+            <DestinationContainer destinations={destinations} isLoaded={isLoaded} handleAddFavorite={handleAddFavorite} />
           </Route>
           <Route exact path="/destination/:id">
             <DestinationDetails user={user} handleAddFavorite={handleAddFavorite} favoriteList={favoriteList}/>
