@@ -37,7 +37,7 @@ const DestinationDetails = ({user, handleAddFavorite, favoriteList}) => {
             setDestination(destination)
             setIsLoaded(true)
         })
-    }, [])
+    }, [id, favoriteList])
 
     if (!isLoaded) return <h2>Loading...</h2>;
     

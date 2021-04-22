@@ -89,7 +89,7 @@ function App() {
             favoriteList={favoriteList} isLoaded={isLoaded}/>
           </Route>
           <Route exact path="/destination-list">
-            <DestinationContainer destinations={destinations} isLoaded={isLoaded}  />
+            <DestinationContainer destinations={destinations} isLoaded={isLoaded} handleAddFavorite={handleAddFavorite}  />
           </Route>
           <Route exact path="/destination/:id">
             <DestinationDetails user={user} handleAddFavorite={handleAddFavorite} favoriteList={favoriteList}/>
