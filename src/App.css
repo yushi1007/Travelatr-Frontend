@@ -66,7 +66,7 @@
 .navbar {
   position: absolute;
   background-color: #24252A;
-  opacity: 60%;
+  opacity: 85%;
   width: 100%;
   height: 60px;
   left: 0px;
@@ -84,9 +84,14 @@
   height: 40px;
   left: 92%;
   top: 10px;
-  background: #E5E5E5;
+  color: white;
+  background: #16c79a;
   border-radius: 24px;
   cursor: pointer;
+}
+
+.loggedinicon:hover{
+  color: black;
 }
 
 #logo {
@@ -106,7 +111,7 @@
 }
 
 #logo:hover{
-color: black;
+color: #2bc6ff;
 }
 
 .home-text {
@@ -123,6 +128,11 @@ color: black;
   top: 10px;
   background: #E5E5E5;
   border-radius: 24px;
+  transition: 0.1s;
+}
+
+.home-text:hover{
+background:#a6dcef;
 }
 
 .loginicon {
@@ -137,9 +147,13 @@ color: black;
   height: 40px;
   left: 85%;
   top: 10px;
-  background: #E5E5E5;
+  background:#2bc6ff;
   border-radius: 24px;
   cursor: pointer;
+}
+
+.loginicon:hover{
+  color: white;
 }
 
 .logout-btn {
@@ -149,16 +163,20 @@ color: black;
   justify-content: center;
   font-size: medium;
   font-weight: bolder;
-  color: black;
+  color: white;
+  background: #e40017;
   width: 80px;
   height: 40px;
   left: 87%;
   top: 10px;
   border-radius: 24px;
-  border: 1px solid #E5E5E5;
-  background: #E5E5E5;
+  border: none;
   text-decoration: none;
   cursor: pointer;
+}
+
+.logout-btn:hover{
+  color: black;
 }
 
 .profile {
@@ -175,6 +193,10 @@ color: black;
   left: 93%;
   top: 10px;
   cursor: pointer;
+}
+
+.profile:hover{
+  color:#2bc6ff;
 }
 
 .favorite {
@@ -194,6 +216,9 @@ color: black;
   cursor: pointer;
 }
 
+.favorite:hover{
+  background: #a6dcef;
+}
 .destination-btn{
   position: absolute;
   text-decoration: none;
@@ -209,17 +234,15 @@ color: black;
   background: #E5E5E5;
   border-radius: 24px;
   cursor: pointer;
+  transition: 0.1s;
+}
+
+.destination-btn:hover{
+  background: #a6dcef;
 }
 
 .home-page {
-  padding: 4rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.profile-form {
-  padding: 4rem;
+  padding: 25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -232,12 +255,13 @@ color: black;
   align-items: center;
 }
 
-.signup-form {
-  padding: 4rem;
+/* .signup-form {
+  padding: 10rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+  opacity: 75%;
+} */
 
 .destination-container{
   padding: 4rem;
@@ -311,6 +335,10 @@ color: black;
   transition: 0.5s;
 }
 
+/* .google-img{
+  
+} */
+
 .image-container img{
   width: 100%;
   transition: 0.5s;
@@ -375,39 +403,11 @@ color: black;
   grid-gap: 1.5rem;
   text-align: center; 
 }
-/*Resize the wrap to see the search bar change!*/
-/* .wrap-search{
-  width: 20%;
-  display: fixed;
-  position: absolute;
-  align-items: center;
-  justify-content: center;
-  top: 22%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} */
-
-/* .view-more-btn {
-  text-decoration: none;
-  border: none;
-  background-color: #343A40;
-  border-radius: 4px;  
-  color: #fff;
-  cursor: pointer;
-  padding: 8px 16px;
-  font-weight: bolder;
-}
-
-.view-more-btn-1:hover {
-  background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
-    animation:slidebg 5s linear infinite;
-  animation:slidebg 5s linear infinite;
-} */
 
 .view-more-btn, .view-more-btn:link, .view-more-btn:visited {
   text-decoration: none;
   padding: 13px 0;
-  border: 1px solid #333;
+  border: none;
   color: #333;
   font-weight: 700;
   text-transform: uppercase;
@@ -420,10 +420,10 @@ color: black;
 }
 
 .view-more-btn:hover {
-  background: #333;
-  border: 1px solid #333;
+  background: rgb(88, 188, 242);
+  /* border: none; */
   color: #fefefe;
-  border-radius: 20px;
+  /* border-radius: 20px; */
 }
 
 #checkbox-label {
@@ -446,6 +446,7 @@ color: black;
 
 .form-box{
   margin-top: 7vh;
+  opacity:85%;
   background: white;
   padding-right: 80px;
   padding-left: 80px;
@@ -514,13 +515,13 @@ label {
   color: #1E90FF;
 }
 
-/* .signup-form{
+.signup-form{
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-} */
+}
 
 .signup-box{
   border: 1px solid lightgrey;
@@ -577,6 +578,8 @@ label {
   padding-top: 5vh;
 }
 
+
+
 .show {
   display: block;
   transition: 800ms;
@@ -589,17 +592,118 @@ label {
   opacity: 0;
 }
 
-/* .favorite-list{
-  grid-area: main;
-  width: 100%;
-  margin-top: 80px;
+.container-box {
+  display: flex;
+  padding-top: 3.8rem;
 }
 
-.favorite-container{
+.profile-form {
+  width: 300px;
+  padding: 2rem;
+  flex-direction: column;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-} */
+  justify-content: center;
+  align-items: center;
+  opacity: 75%;
+  background-color: #24252A;
+}
+
+.favorite-list{
+  width: 100%;
+  border-radius: 5px;
+  padding: 1em;
+}
+
+.list-container span{
+  display:block;
+  justify-content: center;
+}
+
+.profile-box{
+  border: 1px solid lightgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 2px;
+  padding-left: 10px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin: 5px;
+  font-size: 11pt;
+  background: transparent;
+  transition: 1s;
+  color: white;
+  outline: none;
+}
+
+.my-profile h1{
+color:white;
+}
+
+.my-profile label{
+  color: white;
+}
+
+.update-btn{
+  width:50%;
+  border: 1px solid lightgrey;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  font-weight: 600;
+  margin: 5px;
+  font-size: 11pt;
+  background: transparent;
+  cursor: pointer;
+  transition: 1s;
+  color: white;
+  outline: none;
+}
+
+.update-btn:hover{
+  transform: scale(1.03);
+  letter-spacing: 2px;
+}
+
+.delete-btn i{
+  margin: 5px;
+}
+
+.delete-btn {
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  border: none;
+  background: none;
+  transition: color 300ms;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  color: rgb(255, 0, 0);
+}
+
+.delete-btn:active {
+  color: rgb(89, 88, 88);
+}
+
+.delete-btn:focus {
+  outline: none;
+}
+
+.home-page h1{
+  color: white;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: italic small-caps bold 50px/2 cursive;
+}
+
+.home-page h3{
+  color: white;
+  font: italic small-caps bold 20px/2 cursive;
+}
 
 @media only screen and (max-width: 780px){
   .destination{

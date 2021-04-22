@@ -39,14 +39,15 @@ const Profile = ({user, setUser, handleAddFavorite, handleDeleteFavorite, favori
 
 const { first_name, last_name, location, username, password } = formData;
     return(
-    <>
+    <div className="container-box">
     <div className="profile-form" onSubmit={handleSubmit} >
-        <form>
+        <form className="my-profile">
             <h1>{user.username}'s Profile</h1>
             <label>First Name</label><br></br>
                 <input
                     type="text"
                     name="first_name"
+                    className="profile-box"
                     value={first_name}
                     onChange={handleChange}
                 /><br></br>
@@ -55,6 +56,7 @@ const { first_name, last_name, location, username, password } = formData;
                 <input
                     type="text"
                     name="last_name"
+                    className="profile-box"
                     value={last_name}
                     onChange={handleChange}
                 /><br></br>
@@ -63,6 +65,7 @@ const { first_name, last_name, location, username, password } = formData;
                 <input
                     type="text"
                     name="location"
+                    className="profile-box"
                     value={location}
                     onChange={handleChange}
                 /><br></br>
@@ -71,6 +74,7 @@ const { first_name, last_name, location, username, password } = formData;
                 <input
                     type="text"
                     name="username"
+                    className="profile-box"
                     value={username}
                     onChange={handleChange}
                 /><br></br>
@@ -79,16 +83,17 @@ const { first_name, last_name, location, username, password } = formData;
                 <input
                     type="password"
                     name="password"
+                    className="profile-box"
                     value={password}
                     onChange={handleChange}
                 /><br></br>
-            <input type="submit" value="Update" />
+            <input type="submit" value="Update" className="update-btn" />
         </form>
         </div>
         <div className="favorite-list">
             <FavoriteList user={user} handleAddFavorite={handleAddFavorite} handleDeleteFavorite={handleDeleteFavorite} favoriteList={favoriteList} isLoaded={isLoaded} />
         </div>
-    </>
+    </div>
     )
 }
 

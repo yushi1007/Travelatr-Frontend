@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-
+import sign_up_page_img from "../images/JakobOwens-img.jpeg";
 
 function SignUp({ setUser }) {
   const [formData, setFormData] = useState({
@@ -112,6 +112,7 @@ function SignUp({ setUser }) {
                 <input type="submit" value="SIGN UP" className="signup-btn" />
             </form>
         </div>
+        <img id="background-img" src={sign_up_page_img} alt="background-img"/>
     </div>
   );
 }

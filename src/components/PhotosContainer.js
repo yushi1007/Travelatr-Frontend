@@ -12,7 +12,7 @@ export default function PhotosContainer ({photos}) {
         setPhotoIndex(photoIndex => (photoIndex + 2) % photos.length)
     }
     return (
-        <div>
+        <div className="photo-container">
             {photoItems}
             <button onClick={handleClickMore}>Show more photo</button>
         </div>
