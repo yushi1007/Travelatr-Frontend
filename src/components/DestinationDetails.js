@@ -94,5 +94,5 @@ const DestinationDetails = ({user, handleAddFavorite, favoriteList}) => {
     </div>
     )
 }
-// wip
+// CRUD DONE
 export default DestinationDetails;
