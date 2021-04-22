@@ -82,6 +82,7 @@ const DestinationDetails = ({user, handleAddFavorite, favoriteList}) => {
             <p>{us ? "Domestic" : "International"}</p>
             <p>Airport code: {airport_code}</p>
         </div>
+            <FlightSearch />
         <div className="review-details">
             <span style={{display: rating ? "block" : "none" }}>
                 <p>{rating}</p>
@@ -90,7 +91,6 @@ const DestinationDetails = ({user, handleAddFavorite, favoriteList}) => {
             </span>
         </div>
             <PhotosContainer photos={photos} />
-            <FlightSearch />
     </>
     )
 }
