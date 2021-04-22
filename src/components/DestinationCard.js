@@ -3,7 +3,7 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 
 
-const DestinationCard = ({ destination }) => {
+const DestinationCard = ({ destination, handleAddFavorite }) => {
     const { id, name, image, description, likes } = destination
     const history = useHistory()
     const changeLocation = () => {
