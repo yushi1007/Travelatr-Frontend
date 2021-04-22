@@ -61,7 +61,7 @@ function App() {
     const newFavoriteList = favoriteList.filter((fav) => fav.id !== favoriteToRemove.id)
     setFavoriteList(newFavoriteList)
   }
-
+console.log(process.env.REACT_APP_SKY_KEY, "api_key")
   console.log(favoriteList, "fav list")
   
   return (

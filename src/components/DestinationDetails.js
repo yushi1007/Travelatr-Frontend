@@ -68,16 +68,18 @@ const DestinationDetails = ({user, handleAddFavorite, favoriteList}) => {
 
     return(
     <div className="details-box">
+        <div className="img-details">
+            <img src={image} alt={name}/>
+        </div>
         <div className="destination-details">
             <h3>{name}</h3>
-            <img src={image} alt={name}/>
-            <button className="like-btn" onClick={handleLikeClick}>{likes.length} Likes 💙</button>
-            <button className="fav-btn" onClick={handleFavoriteClick}>{favorite ? "Added" : "Add"} to favorites</button>
             <p>{description}</p>
-            <p>{us ? "Domestic" : "International"}</p>
-            <p>Airport code: {airport_code}</p>
+            <h4>{us ? "Domestic" : "International"}</h4>
+            <h5>Airport code: {airport_code}</h5>
+            <span className="like-btn" onClick={handleLikeClick}>♥ <strong>{likes.length} Likes</strong></span>
+            <button className="fav-btn" onClick={handleFavoriteClick}>{favorite ? "Added" : "Add"} to favorites</button>
         </div>
-            <FlightSearch />
+            <FlightSearch name={name}/>
         <div className="review-details">
             <span style={{display: rating ? "block" : "none" }}>
                 <p>{rating}</p>
