@@ -91,7 +91,6 @@ const DestinationDetails = ({user, handleAddFavorite, favoriteList}) => {
             </span>
         </div>
             <PhotosContainer photos={photos} />
-
     </div>
     )
 }
