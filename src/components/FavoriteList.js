@@ -12,16 +12,19 @@ const FavoriteList = ({favoriteList, isLoaded, handleAddFavorite, handleDeleteFa
         .then(handleDeleteFavorite)
     }
     const favoriteItems = favoriteList.map((fav) => 
-      <li key={fav.id}>
+      <span style={{width:"300px"}} key={fav.id}>
         <DestinationCard  destination={fav.destination} handleAddFavorite={handleAddFavorite}/>
-        <button id={fav.id} className="delete-btn" onClick={handleDeleteClick}>Remove from Favorites</button>
-      </li>
+        <button id={fav.id} className="delete-btn" onClick={handleDeleteClick}><i className="fas fa-trash-alt"></i>REMOVE</button>
+      </span>
     )
     return(
-        <div className="favorite-container">
+        <>
             <h1>My Favorite List</h1>
+            <hr></hr>
+        <div className="destination">
             {favoriteList ? favoriteItems : "loading"}
         </div>
+        </>
     )
 }
 

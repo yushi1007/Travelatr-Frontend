@@ -51,7 +51,7 @@ const Login = ({ setUser, isShowLogin }) => {
 <div className="login-form">
     <div className="form-box">
       <form onSubmit={handleSubmit}>
-        <h1 className="login-text">Login</h1>
+        <h1 className="login-text">Sign In</h1>
         <label>Username</label><br></br>
         <input
           type="text"

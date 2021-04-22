@@ -72,7 +72,7 @@ const DestinationDetails = ({user, handleAddFavorite, favoriteList}) => {
     }
 
     return(
-    <>
+    <div className="details-box">
         <div className="destination-details">
             <h3>{name}</h3>
             <img src={image} alt={name}/>
@@ -91,7 +91,8 @@ const DestinationDetails = ({user, handleAddFavorite, favoriteList}) => {
             </span>
         </div>
             <PhotosContainer photos={photos} />
-    </>
+
+    </div>
     )
 }
 // wip
