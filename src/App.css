@@ -397,13 +397,6 @@ background:#a6dcef;
   font-size: 20px;
 }
 
-.destination-details{
-  display: grid;
-  padding: 4rem;
-  grid-gap: 1.5rem;
-  text-align: center; 
-}
-
 .view-more-btn, .view-more-btn:link, .view-more-btn:visited {
   text-decoration: none;
   padding: 13px 0;
@@ -715,4 +708,87 @@ table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
 }
-/* added more css */
+
+.img-details{
+  /* margin-top: 150px;
+  width: 38%; */
+  margin-left: 2%;
+  height: 500px;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.like-btn{
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding-right: 5px;
+  padding-left: 5px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  width: 80px;
+  height: 30px;
+  left: 225px;
+  top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(253, 159, 124);
+  background: #02475e;
+  box-shadow: 10px 10px 10px 1px rgba(0, 0, 0, 0.2);
+  transition: color 300ms;
+}
+
+.like-btn:hover {
+  color: rgb(241, 71, 19);
+}
+
+.like-btn:active {
+  color: rgb(253, 159, 124);
+}
+
+.like-btn:focus {
+  outline: none;
+}
+
+.like-btn strong{
+  color: white;
+}
+
+.destination-details h4{
+  margin: 0px;
+}
+
+.destination-details h3{
+  border-bottom: 2px solid black;
+  line-height: 30px;
+}
+
+.destination-details p{
+  margin-top: 0px;
+}
+
+.fav-btn{
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  font-weight: bolder;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: rgb(253, 159, 124);
+  transition: color 300ms;
+}
+
+.fav-btn:hover {
+  background-color: rgb(241, 71, 19);
+}
+
+.fav-btn:active {
+  background-color: rgb(253, 159, 124);
+}

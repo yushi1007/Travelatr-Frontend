@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const FlightSearch = () => {
+const FlightSearch = ({ name }) => {
     const [carriers, setCarriers] = useState([])
     const [places, setPlaces] = useState([])
     const [quotes, setQuotes] = useState([])
@@ -74,7 +74,7 @@ const FlightSearch = () => {
                     </tr>
                     <tr>
                         <td>{q.Direct ? "Direct" : "Indirect"}</td>
-                        <td>{q.MinPrice}</td>
+                        <td>$ {q.MinPrice}</td>
                         <td>{q.OutboundLeg.CarrierIds}</td>
                         <td>{q.OutboundLeg.DepartureDate}</td>
                         <td>{q.QuoteDateTime}</td>
@@ -105,20 +105,31 @@ const FlightSearch = () => {
     }
     
     return(
-        <div className="flight-search">
+    <div className="flight-search-box">
+        <div className="search-form">
+            <h3>Search for flight to {name}</h3>
             <form onSubmit={handleSubmit}>
+                <label>Country:</label>
                 <input className="prompt" type="text" name="country" value={formData.country} onChange={handleChange} placeholder="Country you're currently in..." />
+                <label>Currency:</label>
                 <input className="prompt" type="text" name="currency" value={formData.currency} onChange={handleChange} placeholder="Currency for flight results..." />
+                <label>Destination:</label>
                 <input className="prompt" type="text" name="destination" value={formData.destination} onChange={handleChange} placeholder="Destination airport code..." />
+                <label>Outbound Date:</label>
                 <input className="prompt" type="text" name="outbound" value={formData.outbound} onChange={handleChange} placeholder="Outbound date yyyy-mm-dd, or 'anytime'..." />
+                <label>Origin:</label>
                 <input className="prompt" type="text" name="origin" value={formData.origin} onChange={handleChange} placeholder="Origin airport code..." />
+                <label>Inbound Date:</label>
                 <input className="prompt" type="text" name="inbound" value={formData.inbound} onChange={handleChange} placeholder="Inbound date yyyy-mm-dd, or 'anytime' (leave blank if one way 😉)..." />
-                <button type="submit" >Search</button>
+                <button type="submit">Search</button>
             </form>
-            {carriers}
-            {places}
-            {quotes}
+            <div className="flight-info">
+                {carriers}
+                {places}
+                {quotes}
+            </div>
         </div>
+    </div>
     )
 }
 
