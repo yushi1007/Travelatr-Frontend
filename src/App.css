@@ -710,4 +710,9 @@ color:white;
       margin: 10px auto;
   } 
 }
+/* added some css */
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
 /* added more css */
