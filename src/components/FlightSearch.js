@@ -31,14 +31,16 @@ const FlightSearch = ({ name }) => {
         const carrierItems = response.Carriers.map((c) => 
             <span key={c.Name}>
                 <table>
-                    <tr> 
-                        <th>Carrier Id</th>
-                        <th>Airline</th>
-                    </tr>
-                    <tr>
-                        <td>{c.CarrierId}</td>
-                        <td>{c.Name}</td>
-                    </tr>
+                    <tbody>
+                        <tr> 
+                            <th>Carrier Id</th>
+                            <th>Airline</th>
+                        </tr>
+                        <tr>
+                            <td>{c.CarrierId}</td>
+                            <td>{c.Name}</td>
+                        </tr>
+                    </tbody>
                 </table>
             </span>
         )
@@ -46,18 +48,20 @@ const FlightSearch = ({ name }) => {
         const placeItems = response.Places.map((p) => 
             <span key={p.Name}>
                 <table>
-                    <tr> 
-                        <th>Airport</th>
-                        <th>Location</th>
-                        <th>Airport code</th>
-                        <th>Place Id</th>
-                    </tr>
-                    <tr>
-                        <td>{p.Name}</td>
-                        <td>{p.CityName} - {p.CountryName}</td>
-                        <td>{p.SkyscannerCode}</td>
-                        <td>{p.PlaceId}</td>
-                    </tr>
+                    <tbody>
+                        <tr> 
+                            <th>Airport</th>
+                            <th>Location</th>
+                            <th>Airport code</th>
+                            <th>Place Id</th>
+                        </tr>
+                        <tr>
+                            <td>{p.Name}</td>
+                            <td>{p.CityName} - {p.CountryName}</td>
+                            <td>{p.SkyscannerCode}</td>
+                            <td>{p.PlaceId}</td>
+                        </tr>
+                    </tbody>
                 </table>
             </span>
         )
@@ -65,20 +69,22 @@ const FlightSearch = ({ name }) => {
         const quotesItems = response.Quotes.map((q) => 
             <span key={q.QuoteId}>
                 <table>
-                    <tr> 
-                        <th>Flight type</th>
-                        <th>Minimum Price</th>
-                        <th>Carrier Id</th>
-                        <th>Departure date</th>
-                        <th>Quote date</th>
-                    </tr>
-                    <tr>
-                        <td>{q.Direct ? "Direct" : "Indirect"}</td>
-                        <td>$ {q.MinPrice}</td>
-                        <td>{q.OutboundLeg.CarrierIds}</td>
-                        <td>{q.OutboundLeg.DepartureDate}</td>
-                        <td>{q.QuoteDateTime}</td>
-                    </tr>
+                    <tbody>
+                        <tr> 
+                            <th>Flight type</th>
+                            <th>Minimum Price</th>
+                            <th>Carrier Id</th>
+                            <th>Departure date</th>
+                            <th>Quote date</th>
+                        </tr>
+                        <tr>
+                            <td>{q.Direct ? "Direct" : "Indirect"}</td>
+                            <td>$ {q.MinPrice}</td>
+                            <td>{q.OutboundLeg.CarrierIds}</td>
+                            <td>{q.OutboundLeg.DepartureDate}</td>
+                            <td>{q.QuoteDateTime}</td>
+                        </tr>
+                    </tbody>
                 </table>
             </span>
         )

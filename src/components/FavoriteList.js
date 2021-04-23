@@ -15,7 +15,7 @@ const FavoriteList = ({favoriteList, isLoaded, handleAddFavorite, handleDeleteFa
     }
     const favoriteItems = favoriteList.map((fav) => 
       <span style={{width:"300px"}} key={fav.id}>
-        <DestinationCard  key={fav.id} destination={fav.destination} handleAddFavorite={handleAddFavorite} likesCount={likesCount}/>
+        <DestinationCard destination={fav.destination} handleAddFavorite={handleAddFavorite}/>
         <button id={fav.id} className="delete-btn" onClick={handleDeleteClick}><i className="fas fa-trash-alt"></i>REMOVE</button>
       </span>
     )

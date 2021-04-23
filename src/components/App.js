@@ -24,7 +24,7 @@ function App() {
       setDestinations(destinations)
       setIsLoaded(true)
     })
-}, [])
+  }, [])
 
   useEffect(() => {
     // GET /me
@@ -47,7 +47,7 @@ function App() {
         setUser(signedInUser);
         console.log(signedInUser.favorites, "user's favs")
         setFavoriteList(signedInUser.favorites)
-        setIsLoaded(true)
+        // setIsLoaded(true)
       });
   }, []);
    
@@ -61,7 +61,7 @@ function App() {
     const newFavoriteList = favoriteList.filter((fav) => fav.id !== favoriteToRemove.id)
     setFavoriteList(newFavoriteList)
   }
-console.log(process.env.REACT_APP_SKY_KEY, "api_key")
+
   console.log(favoriteList, "fav list")
   
   return (
@@ -69,9 +69,6 @@ console.log(process.env.REACT_APP_SKY_KEY, "api_key")
       <NavBar user={user} setUser={setUser} />
       <main>
         <Switch>
-          <Route exact path="/">
-            <Home setUser={setUser} />
-          </Route>
           <Route exact path="/signup">
             <SignUp setUser={setUser} />
           </Route>
@@ -81,10 +78,13 @@ console.log(process.env.REACT_APP_SKY_KEY, "api_key")
             favoriteList={favoriteList} isLoaded={isLoaded} />
           </Route>
           <Route exact path="/destination-list">
-            <DestinationContainer destinations={destinations} isLoaded={isLoaded} handleAddFavorite={handleAddFavorite} />
+            <DestinationContainer destinations={destinations} isLoaded={isLoaded} />
           </Route>
           <Route exact path="/destination/:id">
             <DestinationDetails user={user} handleAddFavorite={handleAddFavorite} favoriteList={favoriteList}/>
+          </Route>
+          <Route exact path="/">
+            <Home setUser={setUser} />
           </Route>
         </Switch>
       </main>

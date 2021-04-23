@@ -709,6 +709,10 @@ table, th, td {
   border-collapse: collapse;
 }
 
+table {
+  width: 50%;
+}
+
 .img-details{
   /* margin-top: 150px;
   width: 38%; */
