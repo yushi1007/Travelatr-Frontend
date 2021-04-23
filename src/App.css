@@ -447,6 +447,10 @@ background:#a6dcef;
   box-shadow: 10px 10px 10px 1px rgba(0, 0, 0, 0.2);
 }
 
+.form-box.solid{
+  opacity:200%;
+}
+
 .login-text{
   width: 100%;
   border-bottom: 2px solid black;
@@ -530,7 +534,6 @@ label {
   font-size: 11pt;
   background: transparent;
   transition: 1s;
-  /* width: 100%; */
   outline: none;
 }
 
@@ -543,7 +546,6 @@ label {
   margin-top: 5px;
   border-radius: 20px;
   border: none;
-  /* margin-left: 5px; */
   font-size: 15pt;
   font-weight: 700;
   transition: 1s;
@@ -703,15 +705,28 @@ color:white;
       margin: 10px auto;
   } 
 }
-/* added some css */
+
+table{
+  width: 700px;
+  margin: 5px auto;
+}
+
+table tr:nth-child(1){
+  width: 200px;
+}
+table tr:nth-child(2){
+  width: 500px;
+}
+
 table, th, td {
-  border: 1px solid black;
+  border: 0.5px solid lightgray;
   border-collapse: collapse;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .img-details{
-  /* margin-top: 150px;
-  width: 38%; */
   margin-left: 2%;
   height: 500px;
   float: left;
@@ -791,4 +806,90 @@ table, th, td {
 
 .fav-btn:active {
   background-color: rgb(253, 159, 124);
+}
+
+.flight-search-form{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.search-box{
+  margin-top: 1vh;
+  margin-bottom: 2.5vh;
+  opacity:85%;
+  padding-right: 300px;
+  padding-left: 300px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+.search-input{
+  border: 1px solid lightgrey;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 2px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin: 5px;
+  font-size: 11pt;
+  background: transparent;
+  transition: 1s;
+  width: 100%; 
+}
+
+.flight-button{
+  width: 25%;
+  justify-content: center;
+  align-items: center;
+  background-color: #00FF7F;
+  color: black;
+  margin-top: 5px;
+  border-radius: 20px;
+  border: none;
+  font-size: 15pt;
+  font-weight: 700;
+  transition: 1s;
+  outline: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.flight-button:hover{
+  transform: scale(1.03);
+  letter-spacing: 4px;
+  color: #1E90FF;
+}
+
+.photo-container img{
+height: 300px;
+margin:0 10px;
+}
+
+/* .show-more-btn{
+  justify-content: center;
+  align-items: center;
+} */
+
+.photo-container{
+  height: 300px;
+  width:100%;
+  display: flex;
+}
+
+.photo-container div:nth-child(1){
+  width:80%
+}
+
+.photo-container div:nth-child(2){
+  width:20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flight-button.more{
+  font-size: 10pt;
+  width: 200px;
 }

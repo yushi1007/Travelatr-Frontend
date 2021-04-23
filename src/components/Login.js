@@ -49,7 +49,7 @@ const Login = ({ setUser, isShowLogin }) => {
   return (
 <div className={`${isShowLogin ? "active" : ""} show`}>
 <div className="login-form">
-    <div className="form-box">
+    <div className="form-box solid">
       <form onSubmit={handleSubmit}>
         <h1 className="login-text">Sign In</h1>
         <label>Username</label><br></br>
