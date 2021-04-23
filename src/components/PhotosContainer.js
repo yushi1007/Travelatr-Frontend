@@ -13,8 +13,12 @@ export default function PhotosContainer ({photos}) {
     }
     return (
         <div className="photo-container">
-            {photoItems}
-            <button onClick={handleClickMore}>Show more photo</button>
+            <div>
+                {photoItems}
+            </div>
+            <div>
+                <button className="flight-button more" onClick={handleClickMore}>Show more photo</button>
+            </div>
         </div>
     )
 }
