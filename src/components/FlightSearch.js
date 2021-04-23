@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const FlightSearch = ({ name }) => {
+const FlightSearch = ({ name, toggleSearch }) => {
     const [carriers, setCarriers] = useState([])
     const [places, setPlaces] = useState([])
     const [quotes, setQuotes] = useState([])
@@ -101,7 +101,7 @@ const FlightSearch = ({ name }) => {
     }
     
     return(
-<>
+<div>
     <div className="flight-search-form">
         <div className="search-box">
             <form onSubmit={handleSubmit}>
@@ -122,12 +122,12 @@ const FlightSearch = ({ name }) => {
             </form>
             </div>
         </div>
-            <div className="flight-info">
-                {carriers}
-                {places}
-                {quotes}
-            </div>
-</>
+        <div className="flight-info">
+            {carriers}
+            {places}
+            {quotes}
+        </div>
+</div>
     )
 }
 // Update

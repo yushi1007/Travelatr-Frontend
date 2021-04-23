@@ -5,18 +5,23 @@ import ReviewList from "./ReviewList";
 import PhotosContainer from "./PhotosContainer";
 
 const DestinationDetails = ({user, handleAddFavorite, favoriteList}) => {
-    const {id} = useParams()
     
     const [destination, setDestination] = useState(null)
     const [isLoaded, setIsLoaded] = useState(false)
     const [favorite, setFavorite] = useState(false)
-    
+    const [toggleSearch, setToggleSearch] = useState(false)
+
+    const {id} = useParams()
+
     const handleSetFavorite = (newFavorite) => {
         setFavorite(favorite => !favorite)
         handleAddFavorite(newFavorite)
     }
     
-    
+    const handleToggleSearch = () => {
+        setToggleSearch(prev => !prev)
+    }
+
     useEffect(() => {
         fetch(`http://localhost:7000/destinations/${id}`)
         .then(r => r.json())
@@ -79,7 +84,10 @@ const DestinationDetails = ({user, handleAddFavorite, favoriteList}) => {
             <span className="like-btn" onClick={handleLikeClick}>♥ <strong>{likes.length} Likes</strong></span>
             <button className="fav-btn" onClick={handleFavoriteClick}>{favorite ? "Added" : "Add"} to favorites</button>
         </div>
-            <FlightSearch name={name}/>
+        <div> 
+            <button className="flight-button more" onClick={handleToggleSearch}>{toggleSearch ? "Hide" : "Show"} Flight Search Form</button>
+            {toggleSearch && <FlightSearch toggleSearch={toggleSearch} name={name}/> }
+        </div>
         <div className="review-details">
             <span style={{display: rating ? "block" : "none" }}>
                 <p>{rating}</p>
