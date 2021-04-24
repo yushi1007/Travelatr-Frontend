@@ -118,7 +118,7 @@ const FlightSearch = ({ name }) => {
                 <input className="search-input" type="text" name="origin" value={formData.origin} onChange={handleChange} placeholder="Origin airport code..." />
                 <label>Inbound Date:</label>
                 <input className="search-input" type="text" name="inbound" value={formData.inbound} onChange={handleChange} placeholder="Inbound date yyyy-mm-dd, or 'anytime' (leave blank if one way 😉)..." />
-                <button type="submit" className="flight-button">Search</button>
+                <button type="submit" className="flight-search-button">Search</button>
             </form>
             </div>
         </div>

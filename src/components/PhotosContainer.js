@@ -17,7 +17,7 @@ export default function PhotosContainer ({photos}) {
                 {photoItems}
             </div>
             <div>
-                <button className="flight-button more" onClick={handleClickMore}>Show more photo</button>
+                <button className="flight-button more" onClick={handleClickMore}><i class="fas fa-chevron-right"></i></button>
             </div>
         </div>
     )
