@@ -39,7 +39,7 @@ const DestinationDetails = ({user, handleAddFavorite, favoriteList}) => {
         })
     }, [id, favoriteList])
 
-    if (!isLoaded) return <h2>Loading...</h2>;
+    if (!isLoaded) return <h2 className="loading">Loading...</h2>;
     
     const { name, image, description, us, airport_code, photos, rating, reviews, user_ratings_total, likes } = destination
     
@@ -99,5 +99,5 @@ const DestinationDetails = ({user, handleAddFavorite, favoriteList}) => {
     </div>
     )
 }
-// CRUD DONE
+
 export default DestinationDetails;
