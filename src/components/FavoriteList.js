@@ -13,6 +13,7 @@ const FavoriteList = ({favoriteList, isLoaded, handleAddFavorite, handleDeleteFa
         .then(r => r.json())
         .then(handleDeleteFavorite)
     }
+    
     const favoriteItems = favoriteList.map((fav) => 
       <span style={{width:"300px"}} key={fav.id}>
         <DestinationCard destination={fav.destination} handleAddFavorite={handleAddFavorite}/>

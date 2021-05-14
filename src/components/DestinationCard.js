@@ -2,7 +2,6 @@ import React from "react";
 // import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 
-
 const DestinationCard = ({ destination }) => {
     const { id, name, image, description, likes } = destination
  

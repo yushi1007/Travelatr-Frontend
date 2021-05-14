@@ -15,9 +15,7 @@ function NavBar({ user, setUser }) {
     }
 
     const logout = () => {
-
         localStorage.removeItem("token")
-    
         setUser(null);
       }
 
