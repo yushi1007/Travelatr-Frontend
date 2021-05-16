@@ -3,7 +3,6 @@ import '../App.css';
 import NavBar from "./NavBar";
 import { Switch, Route } from "react-router-dom";
 import SignUp from "./SignUp";
-// import Login from "./Login";
 import Profile from "./Profile"
 import Home from "./Home";
 import DestinationDetails from "./DestinationDetails";
@@ -15,7 +14,6 @@ function App() {
   const [isLoaded, setIsLoaded] = useState(false)
   const [favoriteList, setFavoriteList] = useState(null)
   
-
   /*        FETCH DESTINATIONS INFO        */
   useEffect(() => {
     fetch("http://localhost:7000/destinations")
@@ -61,7 +59,7 @@ function App() {
     const newFavoriteList = favoriteList.filter((fav) => fav.id !== favoriteToRemove.id)
     setFavoriteList(newFavoriteList)
   }
-// console.log(process.env.REACT_APP_SKY_KEY, "api_key")
+
   console.log(favoriteList, "fav list")
   
   return (
