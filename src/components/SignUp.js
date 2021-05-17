@@ -43,7 +43,10 @@ function SignUp({ setUser }) {
         const { user, token } = data;
         localStorage.setItem("token", token);
         setUser(user);
-        history.push("/destination-list");
+        history.push("/");
+        setTimeout(function(){
+          window.location.reload()
+        }, 0)
       })
       .catch((error) => {
         setErrors(error.errors);
