@@ -38,6 +38,7 @@
 }
 
 #background-img {
+  filter: brightness(50%);
   background-size: cover;
   background-repeat: no-repeat;
   position: fixed;
@@ -45,12 +46,11 @@
   left: 0;
   width: 100vw;
   z-index: -20;
-  min-width: 1700px;
+  min-width: 1500px;
 }
 
 #landscape-img {
   background-size: cover;
-  /* object-fit: cover; */
   background-repeat: no-repeat;
   position: absolute;
   height: auto;
@@ -64,9 +64,8 @@
 }
 
 .navbar {
-  position: absolute;
+  position: fixed;
   background-color: #24252A;
-  opacity: 85%;
   width: 100%;
   height: 60px;
   left: 0px;
@@ -242,7 +241,7 @@ background:#a6dcef;
 }
 
 .home-page {
-  padding: 25rem;
+  padding: 15rem;
   display: flex;
   flex-direction: column;
   align-items: center;
