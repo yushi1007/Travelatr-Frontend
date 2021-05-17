@@ -413,9 +413,7 @@ background:#a6dcef;
 
 .view-more-btn:hover {
   background: rgb(88, 188, 242);
-  /* border: none; */
   color: #fefefe;
-  /* border-radius: 20px; */
 }
 
 #checkbox-label {
@@ -495,7 +493,6 @@ label {
   margin-top: 5px;
   border-radius: 20px;
   border: none;
-  /* margin-left: 5px; */
   font-size: 15pt;
   font-weight: 700;
   transition: 1s;
@@ -579,7 +576,6 @@ label {
 }
 
 .show.active {
-  /* display: none; */
   transform: translateY(100px) scale(0) rotateY(180deg);
   opacity: 0;
 }
