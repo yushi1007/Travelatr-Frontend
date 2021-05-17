@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import DestinationCard from "./DestinationCard";
 import Search from "./Search";
-import aerial from "../images/aerial.jpeg"
+import beach from "../images/beach.jpeg"
 
 const DestinationContainer = ({ destinations, isLoaded, handleAddFavorite }) => {
 /*        USE STATE        */
@@ -68,7 +68,7 @@ const DestinationContainer = ({ destinations, isLoaded, handleAddFavorite }) => 
             sort={sort}
             onSort={handleSort}
             />
-            <img id="landscape-img" src={aerial} alt="landscape"/>
+            <img id="landscape-img" src={beach} alt="landscape"/>
         </div>
         <div className="destination">
             {destinationCards}
