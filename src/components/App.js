@@ -45,7 +45,6 @@ function App() {
         setUser(signedInUser);
         console.log(signedInUser.favorites, "user's favs")
         setFavoriteList(signedInUser.favorites)
-        // setIsLoaded(true)
       });
   }, []);
    
@@ -64,25 +63,44 @@ function App() {
   
   return (
     <div className="App">
-      <NavBar user={user} setUser={setUser} />
+      <NavBar 
+      user={user} 
+      setUser={setUser} 
+      />
       <main>
         <Switch>
           <Route exact path="/signup">
-            <SignUp setUser={setUser} />
+            <SignUp 
+            setUser={setUser} 
+            />
           </Route>
           <Route exact path="/profile">
-            <Profile user={user} setUser={setUser} handleAddFavorite={handleAddFavorite} 
+            <Profile 
+            user={user} 
+            setUser={setUser} 
+            handleAddFavorite={handleAddFavorite} 
             handleDeleteFavorite={handleDeleteFavorite}
-            favoriteList={favoriteList} isLoaded={isLoaded} />
+            favoriteList={favoriteList} 
+            isLoaded={isLoaded} 
+            />
           </Route>
           <Route exact path="/destination-list">
-            <DestinationContainer destinations={destinations} isLoaded={isLoaded} />
+            <DestinationContainer 
+            destinations={destinations} 
+            isLoaded={isLoaded} 
+            />
           </Route>
           <Route exact path="/destination/:id">
-            <DestinationDetails user={user} handleAddFavorite={handleAddFavorite} favoriteList={favoriteList}/>
+            <DestinationDetails 
+            user={user} 
+            handleAddFavorite={handleAddFavorite} 
+            favoriteList={favoriteList}
+            />
           </Route>
           <Route exact path="/">
-            <Home setUser={setUser} />
+            <Home 
+            setUser={setUser} 
+            />
           </Route>
         </Switch>
       </main>

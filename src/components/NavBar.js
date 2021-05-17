@@ -40,7 +40,10 @@ function NavBar({ user, setUser }) {
                 <Link to="/signup" className="loggedinicon">Sign Up</Link>
               <Switch>
                 <Route exact path="/">
-                  <Login setUser={setUser} isShowLogin={isShowLogin}/>
+                  <Login 
+                  setUser={setUser} 
+                  isShowLogin={isShowLogin}
+                  />
                 </Route>
               </Switch>
             </>
