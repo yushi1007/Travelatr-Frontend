@@ -51,35 +51,44 @@ const Login = ({ setUser, isShowLogin }) => {
 
   return (
 <div className={`${isShowLogin ? "active" : ""} show`}>
-<div className="login-form">
-    <div className="form-box solid">
-      <form onSubmit={handleSubmit}>
-        <h1 className="login-text">Sign In</h1>
-        <label>Username</label><br></br>
-        <input
-          type="text"
-          name="username"
-          className="login-box"
-          value={formData.username}
-          onChange={handleChange}
-        /><br></br>
-        <label>Password</label><br></br>
-        <input
-          type="password"
-          name="password"
-          className="login-box"
-          value={formData.password}
-          onChange={handleChange}
-        /><br></br>
-        {errors.map(error => 
-        <p style={{ color: "red"}} key={error}>
-          {error}
-        </p>
-        )}
-        <input type="submit" value="LOGIN" className="login-btn" />
-      </form>
-    </div>
-</div>
+  <div className="login-form">
+      <div className="formbox center">
+        <form onSubmit={handleSubmit}>
+          <div className="icon center">
+              <i className="far fa-user fa-2x"></i>
+          </div>
+          <h1>Sign In</h1>
+          <div>
+            <label>Username</label><br/>
+            <input
+              type="text"
+              name="username"
+              id=""
+              placeholder="Enter Username"
+              value={formData.username}
+              onChange={handleChange}
+            /><br></br>
+          </div>
+          <div>
+            <label>Password</label><br/>
+            <input
+              type="password"
+              name="password"
+              id=""
+              placeholder="Enter Password"
+              value={formData.password}
+              onChange={handleChange}
+            /><br></br>
+          </div>
+          {errors.map(error => 
+          <p style={{ color: "red"}} key={error}>
+            {error}
+          </p>
+          )}
+          <button type="submit" className="btn">LOGIN</button>
+        </form>
+      </div>
+  </div>
 </div>
   );
 }

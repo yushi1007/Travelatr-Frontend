@@ -57,62 +57,74 @@ function SignUp({ setUser }) {
 
   return (
     <div className="signup-form">
-        <div className="form-box">
+        <div className="form-box center">
             <form onSubmit={handleSubmit}>
-                <h1 id="signup-text">Sign Up</h1><br></br>
-
-                <label>First Name</label><br></br>
-                <input
-                    type="text"
-                    name="first_name"
-                    className="signup-box"
-                    value={first_name}
-                    onChange={handleChange}
-                /><br></br>
-
-                <label>Last Name</label><br></br>
-                <input
-                    type="text"
-                    name="last_name"
-                    className="signup-box"
-                    value={last_name}
-                    onChange={handleChange}
-                /><br></br>
-
-                <label>Location</label><br></br>
-                <input
-                    type="text"
-                    name="location"
-                    className="signup-box"
-                    value={location}
-                    onChange={handleChange}
-                /><br></br>
-
-                <label>Username</label><br></br>
-                <input
-                    type="text"
-                    name="username"
-                    className="signup-box"
-                    value={username}
-                    onChange={handleChange}
-                /><br></br>
-
-                <label>Password</label><br></br>
-                <input
-                    type="password"
-                    name="password"
-                    className="signup-box"
-                    value={password}
-                    onChange={handleChange}
-                /><br></br>
-
+            <div className="icon center">
+              <i className="far fa-user fa-2x"></i>
+            </div>
+                <h1>Sign Up</h1><br></br>
+                <div>
+                    <label>First Name</label><br></br>
+                    <input
+                        type="text"
+                        name="first_name"
+                        id=""
+                        placeholder="Enter first name"
+                        value={first_name}
+                        onChange={handleChange}
+                    /><br></br>
+                </div>
+                <div>
+                    <label>Last Name</label><br></br>
+                    <input
+                        type="text"
+                        name="last_name"
+                        id=""
+                        placeholder="Enter last name"
+                        value={last_name}
+                        onChange={handleChange}
+                    /><br></br>
+                </div>
+                <div>
+                    <label>Location</label><br></br>
+                    <input
+                        type="text"
+                        name="location"
+                        id=""
+                        placeholder="Enter location"
+                        value={location}
+                        onChange={handleChange}
+                    /><br></br>
+                </div>
+                <div>
+                    <label>Username</label><br></br>
+                    <input
+                        type="text"
+                        name="username"
+                        id=""
+                        placeholder="Enter username"
+                        value={username}
+                        onChange={handleChange}
+                    /><br></br>
+                </div>
+                <div>
+                    <label>Password</label><br></br>
+                    <input
+                        type="password"
+                        name="password"
+                        id=""
+                        placeholder="Enter password"
+                        value={password}
+                        onChange={handleChange}
+                    /><br></br>
+                </div>
                     {errors.map(error => 
                     <p style={{ color: "red"}} key={error}>
                     {error}
                     </p>
                     )}
 
-                <input type="submit" value="SIGN UP" className="signup-btn" />
+                <button type="submit" className="btn">SIGN UP</button> 
             </form>
         </div>
         <img id="background-img" src={sign_up_page_img} alt="background-img"/>
