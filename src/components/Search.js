@@ -3,12 +3,10 @@ import React from "react";
 const Search = ({searchText, onSearch, checkBox, onCheckBox, sort, onSort}) => {
     return(
     <>
-        {/* <div className="wrap-search"> */}
             <form className="search">
                 <input className="search-name" type="text" placeholder="Search place name..." value={searchText} onChange={onSearch} />
                 <button className="search-button" type="submit"><i className="fas fa-search-location"/></button>
             </form>
-        {/* </div> */}
             <label id="checkbox-label">International</label>
             <input 
                     type="checkbox" 

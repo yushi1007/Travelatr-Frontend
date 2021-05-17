@@ -130,6 +130,6 @@ const FlightSearch = ({ name, toggleSearch }) => {
 </div>
     )
 }
-// Update
+
 export default FlightSearch;
 
