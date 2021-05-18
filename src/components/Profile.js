@@ -4,7 +4,6 @@ import FavoriteList from "./FavoriteList";
 const Profile = ({user, setUser, handleAddFavorite, handleDeleteFavorite, favoriteList, isLoaded}) => {
     
     const [formData, setFormData] = useState({
-        // pre fill the form with current user info
         first_name: user.first_name,
         last_name: user.last_name,
         username: user.username,
