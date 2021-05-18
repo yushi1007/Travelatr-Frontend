@@ -16,9 +16,9 @@ A travel information website provides latest travel destination recommendations,
 👤 **Yu Shi & Jamie Hoa Pham L-H**
 
 - Github:[@YUSHI](https://github.com/yushi1007) 
-- Linked:[LinkedIn](https://www.linkedin.com/in/yushi95/)
+- Yu Shi:[LinkedIn](https://www.linkedin.com/in/yushi95/)
 - Github:[@JamieHoaPhamL-H](https://github.com/jpham1109) 
-- Linked:[LinkedIn](https://www.linkedin.com/in/jamie-lawrence-hurt-ba3b341ab/)
+- Jamie Hoa Pham L-H:[LinkedIn](https://www.linkedin.com/in/jamie-lawrence-hurt-ba3b341ab/)
 
 ## Support
 
