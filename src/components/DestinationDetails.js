@@ -88,14 +88,14 @@ const DestinationDetails = ({user, handleAddFavorite, favoriteList}) => {
             <button className="flight-button more" onClick={handleToggleSearch}>{toggleSearch ? "Hide" : "Show"} Flight Search </button>
             {toggleSearch && <FlightSearch toggleSearch={toggleSearch} name={name}/> }
         </div>
-        {/* <div className="review-details">
+        <div className="review-details">
             <span style={{display: rating ? "block" : "none" }}>
                 <p>{rating}</p>
                 <p>{reviews ? <ReviewList reviews={reviews} /> : null }</p>
                 <p>{user_ratings_total} reviews </p>
             </span>
-        </div> */}
-            {/* <PhotosContainer photos={photos} /> */}
+        </div>
+            <PhotosContainer photos={photos} />
     </div>
     )
 }
