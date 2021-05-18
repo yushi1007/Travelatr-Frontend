@@ -25,7 +25,6 @@ function App() {
   }, [])
 
   useEffect(() => {
-    // GET /me
     const token = localStorage.getItem("token");
     fetch("http://localhost:7000/me", {
       headers: {
