@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-# Travelatr
-=======
 # Travelatr 
->>>>>>> main
 
 A travel information website provides latest travel destination recommendations, including facts, and flights search
 
