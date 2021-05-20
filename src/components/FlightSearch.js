@@ -91,7 +91,6 @@ const FlightSearch = ({ name, toggleSearch }) => {
         })
         .then(response => response.json())
         .then(response => {
-            // debugger
             renderResult(response)
             console.log(response);
         })
