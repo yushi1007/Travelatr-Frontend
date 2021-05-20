@@ -2,7 +2,7 @@
 
 A travel information website provides latest travel destination recommendations, including facts, and flights search
 
-### 🏖️ [Backend](https://github.com/jpham1109/Travelatr-Backend) | [Frontend](https://github.com/yushi1007/Travelatr-Frontend)
+### 🏖️ [Backend](https://github.com/jpham1109/Travelatr-Backend) | [Frontend](https://github.com/yushi1007/Travelatr-Frontend) | [Demo](https://www.loom.com/share/d988149f565c404bbc4f93fae8b5c976)
 
 # Technologies/APIs Used
 

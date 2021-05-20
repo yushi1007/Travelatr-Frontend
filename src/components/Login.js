@@ -9,7 +9,6 @@ const Login = ({ setUser, isShowLogin }) => {
 
   const [errors, setErrors] = useState([])
   const history = useHistory()
-//   console.log(errors)
   function handleChange(e) {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   }

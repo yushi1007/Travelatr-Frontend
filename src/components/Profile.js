@@ -20,7 +20,6 @@ const Profile = ({user, setUser, handleAddFavorite, handleDeleteFavorite, favori
 
     function handleSubmit(e) {
         e.preventDefault();
-        // TODO: update the user's profile
             const token = localStorage.getItem("token");
             fetch("http://localhost:7000/me", {
               method: "PATCH",
