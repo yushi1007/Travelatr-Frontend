@@ -23,7 +23,7 @@ function SignUp({ setUser }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch("http://localhost:7000/signup", {
+    fetch("https://travelatr.herokuapp.com/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

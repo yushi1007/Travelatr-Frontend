@@ -15,7 +15,7 @@ const Login = ({ setUser, isShowLogin }) => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch("http://localhost:7000/login", {
+    fetch("https://travelatr.herokuapp.com/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -21,7 +21,7 @@ const Profile = ({user, setUser, handleAddFavorite, handleDeleteFavorite, favori
     function handleSubmit(e) {
         e.preventDefault();
             const token = localStorage.getItem("token");
-            fetch("http://localhost:7000/me", {
+            fetch("https://travelatr.herokuapp.com/me", {
               method: "PATCH",
               headers: {
                   "Content-Type": "application/json",

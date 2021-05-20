@@ -23,7 +23,7 @@ const DestinationDetails = ({user, handleAddFavorite, favoriteList}) => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:7000/destinations/${id}`)
+        fetch(`https://travelatr.herokuapp.com/destinations/${id}`)
         .then(r => r.json())
         .then((destination) => {
             const initialFav = favoriteList.find((fav) => {
@@ -44,7 +44,7 @@ const DestinationDetails = ({user, handleAddFavorite, favoriteList}) => {
     const { name, image, description, us, airport_code, photos, rating, reviews, user_ratings_total, likes } = destination
     
     const handleLikeClick = () => {
-        fetch("http://localhost:7000/likes", {
+        fetch("https://travelatr.herokuapp.com/likes", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -59,7 +59,7 @@ const DestinationDetails = ({user, handleAddFavorite, favoriteList}) => {
     }
 
     const handleFavoriteClick = () => {
-        fetch("http://localhost:7000/favorites", {
+        fetch("https://travelatr.herokuapp.com/favorites", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

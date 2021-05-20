@@ -15,7 +15,7 @@ function App() {
   const [favoriteList, setFavoriteList] = useState(null)
   
   useEffect(() => {
-    fetch("http://localhost:7000/destinations")
+    fetch("https://travelatr.herokuapp.com/destinations")
     .then(r => r.json())
     .then(destinations => {
       setDestinations(destinations)
@@ -25,7 +25,7 @@ function App() {
 
   useEffect(() => {
     const token = localStorage.getItem("token");
-    fetch("http://localhost:7000/me", {
+    fetch("https://travelatr.herokuapp.com/me", {
       headers: {
         Authorization: `Bearer ${token}`,
       },

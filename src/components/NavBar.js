@@ -2,9 +2,6 @@ import React, { useState } from "react";
 import { Link, Switch, Route } from "react-router-dom";
 import Login from "./Login";
 
-// import logouticon from '../images/logout.png'
-// import loggedinicon from '../images/login.png'
-
 function NavBar({ user, setUser }) {
 
   const [isShowLogin, setIsShowLogin] = useState(true)
@@ -55,14 +52,3 @@ function NavBar({ user, setUser }) {
     }
 
 export default NavBar;
-
-                    /* <img 
-                    alt="login button"
-                    src={loggedinicon} 
-                    className="loggedinicon" /> */
-
-                    // <img 
-                    // alt="logout"
-                    // src={logouticon} 
-                    // className="loginicon"/>
-                    // <button>Logout</button>

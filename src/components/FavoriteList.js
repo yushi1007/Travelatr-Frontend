@@ -7,7 +7,7 @@ const FavoriteList = ({favoriteList, isLoaded, handleAddFavorite, handleDeleteFa
     if (!isLoaded) return <h2>Loading...</h2>;
     const handleDeleteClick = (event) => {
         const id = event.target.id
-        fetch(`http://localhost:7000/favorites/${id}`, {
+        fetch(`https://travelatr.herokuapp.com/favorites/${id}`, {
             method: "DELETE",
         })
         .then(r => r.json())
