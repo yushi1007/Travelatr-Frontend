@@ -14,7 +14,6 @@ function App() {
   const [isLoaded, setIsLoaded] = useState(false)
   const [favoriteList, setFavoriteList] = useState(null)
   
-  /*        FETCH DESTINATIONS INFO        */
   useEffect(() => {
     fetch("http://localhost:7000/destinations")
     .then(r => r.json())
