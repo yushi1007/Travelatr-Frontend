@@ -590,7 +590,6 @@ background:#a6dcef;
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 75%;
   background-color: #24252A;
 }
 
@@ -814,7 +813,6 @@ table {
 .search-box{
   margin-top: 1vh;
   margin-bottom: 2.5vh;
-  opacity:85%;
   padding-right: 300px;
   padding-left: 300px;
   border-radius: 20px;
